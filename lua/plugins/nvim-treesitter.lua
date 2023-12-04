@@ -12,8 +12,6 @@ local config = function()
             "BufNewFile",
         },
         ensure_installed = {
-            "markdown",
-            "markdown_inline",
             "json",
             "javascript",
             "typescript",
@@ -24,23 +22,22 @@ local config = function()
             "css",
             "bash",
             "lua",
-            "gitignore",
             "python",
         },
         auto_install = true,
         highlight = {
             enable = true,
             additional_vim_regex_highlighting = true,
-        },
-        incremental_selection = {
-            enable = true,
-            keymaps = {
-                init_selection = "<C-s>",
-                node_incremental = "<C-s>",
-                scope_incremental = false,
-                node_decremental = "<BS>",
-            },
-        },
+        }
+        -- incremental_selection = {
+        --     enable = true,
+        --     keymaps = {
+        --         init_selection = "<C-s>",
+        --         node_incremental = "<C-s>",
+        --         scope_incremental = false,
+        --         node_decremental = "<BS>",
+        --     },
+        -- },
     })
 end
 

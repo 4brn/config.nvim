@@ -22,8 +22,8 @@ keymap.set("v", "<", "<gv", { desc = "Indent inwards" })
 keymap.set("v", ">", ">gv", { desc = "Indent outwards" })
 
 -- Comments
-vim.api.nvim_set_keymap("n", "<C-_>", "gcc", { noremap = false, desc = "Comment" })
-vim.api.nvim_set_keymap("v", "<C-_>", "gcc", { noremap = false, desc = "Comment" })
+vim.api.nvim_set_keymap("n", "<C-/>", "gcc", { noremap = false, desc = "Comment" })
+vim.api.nvim_set_keymap("v", "<C-/>", "gcc", { noremap = false, desc = "Comment" })
 
 -- Replaces all instances of the chosen word (the hovered one)
 keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Replace word" })
