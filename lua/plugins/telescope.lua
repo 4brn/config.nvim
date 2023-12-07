@@ -18,7 +18,7 @@ local config = function()
 				hidden = true,
 			},
 			live_grep = {
-				theme = "dropdown",
+				-- theme = "dropdown",
 				previewer = true,
 			},
 			buffers = {
@@ -42,11 +42,11 @@ return {
     },
 	config = config,
     keys = {
-        keymap.set('n', '<leader>fk', ":Telescope keymaps<CR>"),
-        keymap.set('n', '<leader>fh', ":Telescope help_tags<CR>"),
-        keymap.set('n', '<leader>ff', ":Telescope find_files<CR>"),
-        keymap.set('n', '<leader>fa', ":Telescope <CR>"),
-        keymap.set('n', '<leader>fg', ":Telescope live_grep<CR>"),
-        keymap.set('n', '<leader>fb', ":Telescope buffers<CR>"),
+        keymap.set('n', '<leader>fk', ":Telescope keymaps<CR>", {desc = "Find Keymaps"}),
+        keymap.set('n', '<leader>fh', ":Telescope help_tags<CR>", {desc = "Find Help Tags"}),
+        keymap.set('n', '<leader>ff', ":Telescope find_files<CR>", {desc = "Find Files"}),
+        keymap.set('n', '<leader>fa', ":Telescope <CR>", {desc = "Telescope"}),
+        keymap.set('n', '<leader>fg', ":Telescope live_grep<CR>", {desc = "Live Grep"}),
+        keymap.set('n', '<leader>fb', ":Telescope buffers<CR>", {desc = "Find Buffers"}),
     },
 }

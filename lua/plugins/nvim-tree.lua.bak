@@ -1,5 +1,8 @@
 local opts = function()
     require("nvim-tree").setup({
+        update_focused_file = {
+            enable = true,
+        },
         renderer = {
             group_empty = true,
         },
@@ -8,8 +11,14 @@ local opts = function()
         },
         -- Directory Navigaion (nvim-tree)
         vim.keymap.set('n', '<leader>e', vim.cmd.NvimTreeToggle, { noremap = true, silent = true }),
-        vim.keymap.set('n', '<leader>m', vim.cmd.NvimTreeFocus,{ noremap = true, silent = true }),
+        vim.keymap.set('n', '<leader>m', vim.cmd.NvimTreeFocus, { noremap = true, silent = true }),
     })
+
+
+    -- Directory Navigaion (nvim-tree)
+    vim.keymap.set('n', '<leader>e', vim.cmd.NvimTreeFindFileToggle, { desc = "Open File Tree", noremap = true, silent = true })
+    vim.keymap.set('n', '<leader>m', vim.cmd.NvimTreeFocus, { desc = "Focus File Tree", noremap = true, silent = true })
+
 end
 
 return {

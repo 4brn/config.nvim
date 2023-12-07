@@ -2,10 +2,10 @@ return {
     "neovim/nvim-lspconfig",
     event = { "BufReadPre", "BufNewFile" },
     dependencies = {
-		"hrsh7th/cmp-nvim-lsp",
+        "hrsh7th/cmp-nvim-lsp",
         { "antosha417/nvim-lsp-file-operations", config = true }
     },
-    config = function ()
+    config = function()
         local lspconfig = require("lspconfig")
         local cmp_nvim_lsp = require("cmp_nvim_lsp")
         local keymap = vim.keymap -- for conciseness
@@ -22,14 +22,14 @@ return {
             keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, opts)
             keymap.set("n", "gr", require("telescope.builtin").lsp_references, opts)
             keymap.set('n', '<space>wl', function()
-            print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
+                print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
             end, opts)
             keymap.set('n', '<space>D', vim.lsp.buf.type_definition, opts)
             keymap.set('n', '<space>rn', vim.lsp.buf.rename, opts)
             keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, opts)
             keymap.set('n', 'gr', vim.lsp.buf.references, opts)
             keymap.set('n', '<space>f', function()
-            vim.lsp.buf.format { async = true }
+                vim.lsp.buf.format { async = true }
             end, opts)
         end
 
@@ -40,8 +40,8 @@ return {
         -- (not in youtube nvim video)
         local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
         for type, icon in pairs(signs) do
-        local hl = "DiagnosticSign" .. type
-        vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+            local hl = "DiagnosticSign" .. type
+            vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
         end
 
         -- configure html server
@@ -50,7 +50,7 @@ return {
             on_attach = on_attach,
         })
 
-        -- configure typescript server 
+        -- configure typescript server
         lspconfig["tsserver"].setup({
             capabilities = capabilities,
             on_attach = on_attach,
@@ -104,17 +104,17 @@ return {
             on_attach = on_attach,
             settings = { -- custom settings for lua
                 Lua = {
-                -- make the language server recognize "vim" global
-                diagnostics = {
-                    globals = { "vim" },
-                },
-                workspace = {
-                    -- make language server aware of runtime files
-                    library = {
-                    [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-                    [vim.fn.stdpath("config") .. "/lua"] = true,
+                    -- make the language server recognize "vim" global
+                    diagnostics = {
+                        globals = { "vim" },
                     },
-                },
+                    workspace = {
+                        -- make language server aware of runtime files
+                        library = {
+                            [vim.fn.expand("$VIMRUNTIME/lua")] = true,
+                            [vim.fn.stdpath("config") .. "/lua"] = true,
+                        },
+                    },
                 },
             },
         })

@@ -1,13 +1,6 @@
 local config = function()
 	local theme = require("lualine.themes.catppuccin")
 
-	-- set bg transparency in all modes
-	-- theme.normal.c.bg = nil
-	-- theme.insert.c.bg = nil
-	-- theme.visual.c.bg = nil
-	-- theme.replace.c.bg = nil
-	-- theme.command.c.bg = nil
-
 	require("lualine").setup({
 		options = {
 			theme = theme,
@@ -28,48 +21,3 @@ return {
 	lazy = false,
 	config = config,
 }
-
-
---
--- return {
---     "nvim-lualine/lualine.nvim",
---     lazy = false,
---     config = funciton({
---         require('lualine').setup {
---             options = {
---                 theme = 'catppuccin',
---                 globalstatus = false,
---             },
---             sections = {
---                 lualine_a = {
---                     {
---                         'buffers',
---                     }
---                 },
---             }
---         }
---     end})
--- }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
