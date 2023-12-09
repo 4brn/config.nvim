@@ -1,8 +1,10 @@
 local config = function()
     require("nvim-treesitter.configs").setup({
         build = ":TSUpdate",
-        indent = {
+        indent = { enable = true },
+        highlight = {
             enable = true,
+            additional_vim_regex_highlighting = true,
         },
         autotag = {
             enable = true,
@@ -23,12 +25,16 @@ local config = function()
             "bash",
             "lua",
             "python",
+            "jsdoc",
+            "luadoc",
+            "markdown",
+            "query",
+            "vim",
+            "vimdoc",
+            "regex",
+            "toml",
         },
         auto_install = true,
-        highlight = {
-            enable = true,
-            additional_vim_regex_highlighting = true,
-        }
     })
 end
 

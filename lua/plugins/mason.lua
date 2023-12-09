@@ -1,14 +1,13 @@
 return {
     "williamboman/mason.nvim",
-    lazy = false,
     dependencies = {
         "williamboman/mason-lspconfig.nvim",
     },
+    lazy = true,
+    event = "BufReadPre",
     config = function ()
         local mason = require("mason")
         local mason_lspconfig = require("mason-lspconfig")
-        -- cmd = "Mason"
-        -- event = "BufReadPre"
 
         mason.setup({
             ui = {
