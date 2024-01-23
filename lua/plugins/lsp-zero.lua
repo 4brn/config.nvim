@@ -2,12 +2,12 @@ return {
   'VonHeikemen/lsp-zero.nvim',
   branch = 'v3.x',
   dependencies = {
-    { 'williamboman/mason.nvim' },
-    { 'williamboman/mason-lspconfig.nvim' },
-    { 'neovim/nvim-lspconfig' },
-    { 'hrsh7th/cmp-nvim-lsp' },
-    { 'hrsh7th/nvim-cmp' },
-    { 'L3MON4D3/LuaSnip' },
+    'williamboman/mason.nvim',
+    'williamboman/mason-lspconfig.nvim',
+    'neovim/nvim-lspconfig',
+    'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/nvim-cmp',
+    'L3MON4D3/LuaSnip',
   },
 
   config = function()
@@ -30,7 +30,7 @@ return {
     -- read this: https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guides/integrate-with-mason-nvim.md
     require('mason').setup({})
     require('mason-lspconfig').setup({
-      ensure_installed = { 'tsserver', 'rust_analyzer' },
+      ensure_installed = { 'tsserver', 'rust_analyzer', 'clangd', 'pylsp' },
       handlers = {
         lsp_zero.default_setup,
       }
@@ -46,6 +46,7 @@ return {
         { name = 'buffer',  keyword_length = 3 },
         { name = 'path' },
       },
+
       formatting = lsp_zero.cmp_format(),
       mapping = cmp.mapping.preset.insert({
         ['<Tab>'] = cmp.mapping.select_next_item(cmp_select),
