@@ -12,13 +12,13 @@ local opt = vim.opt
 -----------------------------------------------------------
 g.mapleader = ' '
 opt.clipboard = 'unnamedplus'
-opt.completeopt = {"menu", "menuone", "noselect"}
+opt.completeopt = { "menu", "menuone", "noselect" }
 
 -----------------------------------------------------------
 -- Neovim UI
 -----------------------------------------------------------
 opt.number = true
-opt.relativenumber = false
+opt.relativenumber = true
 opt.termguicolors = true
 opt.scrolloff = 8
 -- opt.colorcolumn = '80'
@@ -45,11 +45,11 @@ opt.guicursor = ""
 -----------------------------------------------------------
 -- Tabs, indent
 -----------------------------------------------------------
-opt.tabstop = 2
-opt.softtabstop = 2
-opt.shiftwidth = 2
+opt.tabstop = 4
+opt.softtabstop = 4
+opt.shiftwidth = 4
 opt.expandtab = true
-opt.smartindent = false
+opt.smartindent = true
 
 -----------------------------------------------------------
 -- Undo
@@ -72,33 +72,33 @@ opt.shortmess:append "sI"
 
 -- Disable builtin plugins
 local disabled_built_ins = {
-   "2html_plugin",
-   "getscript",
-   "getscriptPlugin",
-   "gzip",
-   "logipat",
-   -- "netrw",
-   -- "netrwPlugin",
-   -- "netrwSettings",
-   -- "netrwFileHandlers",
-   "matchit",
-   "tar",
-   "tarPlugin",
-   "rrhelper",
-   "spellfile_plugin",
-   "vimball",
-   "vimballPlugin",
-   "zip",
-   "zipPlugin",
-   -- "tutor",
-   "rplugin",
-   "synmenu",
-   "optwin",
-   "compiler",
-   "bugreport",
-   "ftplugin",
+    "2html_plugin",
+    "getscript",
+    "getscriptPlugin",
+    "gzip",
+    "logipat",
+    "netrw",
+    "netrwPlugin",
+    "netrwSettings",
+    "netrwFileHandlers",
+    "matchit",
+    "tar",
+    "tarPlugin",
+    "rrhelper",
+    "spellfile_plugin",
+    "vimball",
+    "vimballPlugin",
+    "zip",
+    "zipPlugin",
+    "tutor",
+    "rplugin",
+    "synmenu",
+    "optwin",
+    "compiler",
+    "bugreport",
+    "ftplugin",
 }
 
 for _, plugin in pairs(disabled_built_ins) do
-   g["loaded_" .. plugin] = 1
+    g["loaded_" .. plugin] = 1
 end
