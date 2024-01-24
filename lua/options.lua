@@ -13,6 +13,7 @@ local opt = vim.opt
 g.mapleader = ' '
 opt.clipboard = 'unnamedplus'
 opt.completeopt = { "menu", "menuone", "noselect" }
+opt.mouse = ""
 
 -----------------------------------------------------------
 -- Neovim UI
