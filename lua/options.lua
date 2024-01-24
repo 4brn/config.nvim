@@ -58,6 +58,7 @@ opt.smartindent = true
 opt.swapfile = false
 opt.backup = false
 opt.undofile = true
+---@diagnostic disable-next-line: assign-type-mismatch
 opt.undodir = vim.fn.expand("~/.vim/undodir")
 
 -----------------------------------------------------------

@@ -8,12 +8,12 @@ return {
                 icons_enabled = true,
                 theme = 'auto',
                 globalstatus = true,
-                component_separators = { left = '', right = '' },
-                section_separators = { left = '', right = '' },
+                -- component_separators = { left = '', right = '' },
+                -- section_separators = { left = '', right = '' },
             },
             sections = {
                 lualine_a = { 'mode' },
-                lualine_b = {}, -- 'branch', 'diff', 'diagnostics'
+                lualine_b = {'branch', 'diff', 'diagnostics'}, -- 
                 lualine_c = { 'filename' },
                 lualine_x = { 'encoding', 'filetype' }, -- , 'fileformat'
                 lualine_y = { 'progress' },
