@@ -19,17 +19,17 @@ return {
         },
         pickers = {
           find_files = {
-            theme = "dropdown", --"dropdown"
-            previewer = false,
+            -- theme = "dropdown", --"dropdown"
+            previewer = true,
             hidden = false,
           },
           live_grep = {
-            theme = "dropdown",
-            previewer = false,
+            -- theme = "dropdown",
+            previewer = true,
           },
           buffers = {
-            theme = "dropdown",
-            previewer = false,
+            -- theme = "dropdown",
+            previewer = true,
           },
         },
       })

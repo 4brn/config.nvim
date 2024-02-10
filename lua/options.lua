@@ -22,8 +22,8 @@ opt.number = true
 opt.relativenumber = true
 opt.termguicolors = true
 opt.scrolloff = 8
--- opt.colorcolumn = '80'
--- opt.signcolumn = 'yes'
+opt.colorcolumn = '80'
+opt.signcolumn = 'yes'
 
 -----------------------------------------------------------
 -- Search
