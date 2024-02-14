@@ -2,7 +2,7 @@ local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
 -- Format
--- vim.keymap.set({ "v", "n" }, "<leader>f", vim.lsp.buf.format, opts)
+vim.keymap.set({ "v", "n" }, "<leader>gf", vim.lsp.buf.format, opts)
 -- vim.keymap.set({ "n" }, "<leader>pv", ":Explore<CR>", opts)
 
 -- Indent and outdent lines in visual mode
