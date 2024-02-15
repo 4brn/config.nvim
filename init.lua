@@ -1,5 +1,8 @@
 vim.loader.enable()
 
+require("config.options")
+require("config.keymaps")
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
     vim.fn.system({
@@ -14,6 +17,16 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local opts = {
+    ui = {
+        border = "rounded",
+    },
+    spec = {
+        { import = "plugins" },
+    },
+    defaults = {
+        lazy = false,
+        version = false,
+    },
     checker = {
         enabled = true,
         notify = false,
@@ -21,8 +34,39 @@ local opts = {
     change_detection = {
         notify = false,
     },
+    performance = {
+        rtp = {
+            disabled_plugins = {
+                "2html_plugin",
+                "tohtml",
+                "getscript",
+                "getscriptPlugin",
+                "gzip",
+                "logipat",
+                "netrw",
+                "netrwPlugin",
+                "netrwSettings",
+                "netrwFileHandlers",
+                "matchit",
+                "tar",
+                "tarPlugin",
+                "rrhelper",
+                "spellfile_plugin",
+                "vimball",
+                "vimballPlugin",
+                "zip",
+                "zipPlugin",
+                "tutor",
+                "rplugin",
+                "syntax",
+                "synmenu",
+                "optwin",
+                "compiler",
+                "bugreport",
+                "ftplugin",
+            },
+        },
+    },
 }
 
-require("options")
-require("keymaps")
-require("lazy").setup("plugins", opts)
+require("lazy").setup(opts)

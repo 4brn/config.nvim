@@ -20,7 +20,7 @@ opt.mouse = ""
 -----------------------------------------------------------
 opt.number = true
 opt.relativenumber = true
-opt.termguicolors = true
+-- opt.termguicolors = true
 opt.scrolloff = 8
 opt.colorcolumn = '80'
 opt.signcolumn = 'yes'
@@ -37,11 +37,6 @@ opt.hlsearch = false
 -- Cursor
 -----------------------------------------------------------
 opt.guicursor = ""
--- {
---     'n-v-c:block-Cursor',
---     'i-ci:block-Cursor',
---     'r:hor50-Cursor'
--- }
 
 -----------------------------------------------------------
 -- Tabs, indent
@@ -50,6 +45,7 @@ opt.tabstop = 4
 opt.softtabstop = 4
 opt.shiftwidth = 4
 opt.expandtab = true
+
 opt.smartindent = true
 
 -----------------------------------------------------------
@@ -73,34 +69,34 @@ opt.updatetime = 50
 opt.shortmess:append "sI"
 
 -- Disable builtin plugins
-local disabled_built_ins = {
-    "2html_plugin",
-    "getscript",
-    "getscriptPlugin",
-    "gzip",
-    "logipat",
-    "netrw",
-    "netrwPlugin",
-    "netrwSettings",
-    "netrwFileHandlers",
-    "matchit",
-    "tar",
-    "tarPlugin",
-    "rrhelper",
-    "spellfile_plugin",
-    "vimball",
-    "vimballPlugin",
-    "zip",
-    "zipPlugin",
-    "tutor",
-    "rplugin",
-    "synmenu",
-    "optwin",
-    "compiler",
-    "bugreport",
-    "ftplugin",
-}
-
-for _, plugin in pairs(disabled_built_ins) do
-    g["loaded_" .. plugin] = 1
-end
+-- local disabled_built_ins = {
+--     "2html_plugin",
+--     "getscript",
+--     "getscriptPlugin",
+--     "gzip",
+--     "logipat",
+--     "netrw",
+--     "netrwPlugin",
+--     "netrwSettings",
+--     "netrwFileHandlers",
+--     "matchit",
+--     "tar",
+--     "tarPlugin",
+--     "rrhelper",
+--     "spellfile_plugin",
+--     "vimball",
+--     "vimballPlugin",
+--     "zip",
+--     "zipPlugin",
+--     "tutor",
+--     "rplugin",
+--     "synmenu",
+--     "optwin",
+--     "compiler",
+--     "bugreport",
+--     "ftplugin",
+-- }
+--
+-- for _, plugin in pairs(disabled_built_ins) do
+--     g["loaded_" .. plugin] = 1
+-- end

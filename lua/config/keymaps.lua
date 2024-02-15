@@ -33,3 +33,24 @@ keymap.set("n", "<leader>sh", ":split<CR>", opts)  -- Split Horizontally
 
 -- Saves the changes of vertial editing when exiting with Ctrl + c
 keymap.set("i", "<C-c>", "<Esc>", opts)
+
+-- Move selected lines with shift+j or shift+k
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+-- Join line while keeping the cursor in the same position
+vim.keymap.set("n", "J", "mzJ`z")
+
+-- Next and previous instance of the highlighted letter
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
+
+-- Delete shift+q keymap
+vim.keymap.set("n", "Q", "<nop>")
+
+-- Fixed ctrl+c weirdness to exit from vertical select mode
+vim.keymap.set("i", "<C-c>", "<Esc>")
+
+-- Search and replace current position word
+vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
