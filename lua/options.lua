@@ -11,19 +11,22 @@ local opt = vim.opt
 -- General
 -----------------------------------------------------------
 g.mapleader = ' '
+g.localmapleader = ' '
 opt.clipboard = 'unnamedplus'
-opt.completeopt = { "menu", "menuone", "noselect" }
-opt.mouse = ""
+opt.completeopt = { --[[ "menu", ]] "menuone", "noselect" }
+opt.mouse = "a"
 
 -----------------------------------------------------------
 -- Neovim UI
 -----------------------------------------------------------
 opt.number = true
 opt.relativenumber = true
--- opt.termguicolors = true
+opt.termguicolors = true
 opt.scrolloff = 8
 opt.colorcolumn = '80'
 opt.signcolumn = 'yes'
+
+opt.wrap = false
 
 -----------------------------------------------------------
 -- Search
@@ -47,6 +50,7 @@ opt.shiftwidth = 4
 opt.expandtab = true
 
 opt.smartindent = true
+opt.breakindent = true
 
 -----------------------------------------------------------
 -- Undo

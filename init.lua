@@ -1,7 +1,4 @@
-vim.loader.enable()
-
-require("config.options")
-require("config.keymaps")
+-- vim.loader.enable()
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -17,11 +14,11 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local opts = {
-    ui = {
-        border = "rounded",
-    },
     spec = {
         { import = "plugins" },
+    },
+    ui = {
+        border = "rounded",
     },
     defaults = {
         lazy = false,
@@ -69,4 +66,7 @@ local opts = {
     },
 }
 
+
+require("options")
+require("keymaps")
 require("lazy").setup(opts)

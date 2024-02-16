@@ -1,5 +1,4 @@
-return
-{
+return {
     "lukas-reineke/indent-blankline.nvim",
     event = "VeryLazy",
     opts = {
@@ -21,6 +20,7 @@ return
                 "notify",
                 "toggleterm",
                 "lazyterm",
+                "oil",
             },
         },
     },
