@@ -1,7 +1,7 @@
 return {
     "hrsh7th/nvim-cmp",
     version = false,
-    event = "InsertEnter",
+    -- event = "InsertEnter",
     dependencies = {
         "L3MON4D3/LuaSnip",
 
@@ -15,7 +15,8 @@ return {
     config = function()
         -- vim.api.nvim_set_hl(0, "CmpGhostText", { link = "Comment", default = true })
         local cmp = require('cmp')
-        local defaults = require("cmp.config.default")()
+        -- local defaults = require("cmp.config.default")()
+        local cmp_select = { behavior = cmp.SelectBehavior.Select }
         local luasnip = require('luasnip')
         -- require('luasnip.loaders.from_vscode').lazy_load()
         -- luasnip.config.setup {}
@@ -37,11 +38,13 @@ return {
             --         border = "rounded",
             --     },
             -- },
+            --
+
             mapping = cmp.mapping.preset.insert {
                 -- ['<C-n>'] = cmp.mapping.select_next_item(),
-                ['<Tab>'] = cmp.mapping.select_next_item(),
+                ['<Tab>'] = cmp.mapping.select_next_item(cmp_select),
                 -- ['<C-p>'] = cmp.mapping.select_prev_item(),
-                ['<S-Tab>'] = cmp.mapping.select_prev_item(),
+                ['<S-Tab>'] = cmp.mapping.select_prev_item(cmp_select),
                 ['<C-b>'] = cmp.mapping.scroll_docs(-4),
                 ['<C-f>'] = cmp.mapping.scroll_docs(4),
                 ['<C-Space>'] = cmp.mapping.complete {},
@@ -80,7 +83,7 @@ return {
             --         hl_group = "CmpGhostText",
             --     },
             -- },
-            sorting = defaults.sorting,
+            -- sorting = defaults.sorting,
         }
     end,
     -- ---@param opts cmp.ConfigSchema
