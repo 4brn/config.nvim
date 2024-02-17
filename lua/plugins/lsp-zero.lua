@@ -12,7 +12,8 @@ return {
 
         'hrsh7th/nvim-cmp',
         'hrsh7th/cmp-nvim-lsp',
-        "hrsh7th/cmp-path",
+        -- 'hrsh7th/cmp-nvim-lsp-signature-help',
+        'hrsh7th/cmp-path',
     },
 
     config = function()
@@ -29,10 +30,10 @@ return {
 				vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
 				vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
 
-            -- vim.keymap.set({ 'v', 'n', 'x' }, '<leader>gf', function()
-            --     vim.lsp.buf.format(
-            --         { async = false, timeout_ms = 10000 })
-            -- end, opts)
+                vim.keymap.set({ 'v', 'n', 'x' }, '<leader>gf', function()
+                    vim.lsp.buf.format(
+                        { async = false, timeout_ms = 10000 })
+                end, opts)
         end)
 
         -- to learn how to use mason.nvim with lsp-zero
@@ -77,6 +78,7 @@ return {
             sources = {
                 { name = 'nvim_lsp' },
                 { name = 'luasnip' },
+                -- { name = 'nvim_lsp_signature_help' },
                 { name = 'path' },
                 { name = 'buffer' },
             },

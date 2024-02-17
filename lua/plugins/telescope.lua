@@ -56,7 +56,7 @@ return {
 		vim.keymap.set("n", "<leader>k", builtin.keymaps, {})
 		vim.keymap.set("n", "<leader>m", builtin.man_pages, {})
 		vim.keymap.set("n", "<leader>h", builtin.help_tags, {})
-		vim.keymap.set("n", "<leader>c", function()
+		vim.keymap.set("n", "<leader>;", function()
 			builtin.find_files({ cwd = '~/.config/nvim' }, {})
 		end)
 	end,
