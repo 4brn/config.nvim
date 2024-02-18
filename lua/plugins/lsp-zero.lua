@@ -1,7 +1,7 @@
 return {
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v3.x',
-    event = { 'BufReadPre', 'BufNewFile' },
+    -- event = { 'BufReadPre', 'BufNewFile' },
     dependencies = {
 		'folke/neodev.nvim',
         'williamboman/mason.nvim',
@@ -12,7 +12,6 @@ return {
 
         'hrsh7th/nvim-cmp',
         'hrsh7th/cmp-nvim-lsp',
-        -- 'hrsh7th/cmp-nvim-lsp-signature-help',
         'hrsh7th/cmp-path',
     },
 
@@ -53,7 +52,6 @@ return {
 
         })
         require('mason-lspconfig').setup({
-            -- ensure_installed = { 'tsserver', 'rust_analyzer', 'clangd', 'pyright', 'lua_ls' },
             ensure_installed = {
                 "clangd",
                 "cssls",
@@ -78,7 +76,6 @@ return {
             sources = {
                 { name = 'nvim_lsp' },
                 { name = 'luasnip' },
-                -- { name = 'nvim_lsp_signature_help' },
                 { name = 'path' },
                 { name = 'buffer' },
             },
