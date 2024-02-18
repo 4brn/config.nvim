@@ -29,10 +29,10 @@ vim.api.nvim_set_keymap("v", "<C-/>", "gcc", { silent = true })
 keymap.set('n', "U", "<C-r>", opts)
 
 -- Navigate vim panes better
-keymap.set('n', '<c-k>', ':wincmd k<CR>', opts)
-keymap.set('n', '<c-j>', ':wincmd j<CR>', opts)
-keymap.set('n', '<c-h>', ':wincmd h<CR>', opts)
-keymap.set('n', '<c-l>', ':wincmd l<CR>', opts)
+keymap.set('n', '<c-k>', '<cmd> TmuxNavigateDown<CR>', opts)
+keymap.set('n', '<c-j>', '<cmd> TmuxNavigateUp<CR>', opts)
+keymap.set('n', '<c-h>', '<cmd> TmuxNavigateLeft<CR>', opts)
+keymap.set('n', '<c-l>', '<cmd> TmuxNavigateRight<CR>', opts)
 
 -- Window Management
 keymap.set("n", "<leader>sv", ":vsplit<CR>", opts) -- Split Vertically

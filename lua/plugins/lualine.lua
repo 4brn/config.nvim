@@ -6,7 +6,7 @@ return {
         options = {
             icons_enabled = true,
             theme = 'auto',
-            globalstatus = false,
+            globalstatus = true,
             component_separators = '|',
             section_separators = '',
             always_divide_middle = true,

@@ -2,6 +2,7 @@ return {
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v3.x',
     -- event = { 'BufReadPre', 'BufNewFile' },
+    event = "VimEnter",
     dependencies = {
 		'folke/neodev.nvim',
         'williamboman/mason.nvim',
