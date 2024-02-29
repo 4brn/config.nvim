@@ -1,10 +1,10 @@
 return {
     'stevearc/oil.nvim',
     event = 'VeryLazy',
-    dependencies = { "nvim-tree/nvim-web-devicons" },
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function()
-        require("oil").setup({
-            vim.keymap.set("n", "<leader>e", require("oil").open),
+        require('oil').setup {
+            vim.keymap.set('n', '<leader>e', require('oil').open, { desc = 'Oil' }),
 
             default_file_explorer = true,
 
@@ -15,13 +15,13 @@ return {
             prompt_save_on_select_new_entry = true,
 
             keymaps = {
-                ["g?"] = "actions.show_help",
-                ["<CR>"] = "actions.select",
-                ["<C-s>"] = "actions.select_vsplit",
+                ['g?'] = 'actions.show_help',
+                ['<CR>'] = 'actions.select',
+                ['<C-s>'] = 'actions.select_vsplit',
                 -- ["<C-h>"] = "actions.select_split",
                 -- ["<C-t>"] = "actions.select_tab",
                 -- ["<C-p>"] = "actions.preview",
-                ["<leader>e"] = "actions.close", -- <C-c>
+                ['<leader>e'] = 'actions.close', -- <C-c>
                 -- ["<C-l>"] = "actions.refresh",
                 -- ["-"] = "actions.parent",
                 -- ["_"] = "actions.open_cwd",
@@ -36,7 +36,6 @@ return {
             view_options = {
                 show_hidden = true,
             },
-
-        })
-    end
+        }
+    end,
 }
