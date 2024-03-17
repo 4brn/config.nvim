@@ -25,7 +25,7 @@ vim.opt.relativenumber = true
 vim.opt.termguicolors = true
 vim.opt.scrolloff = 10
 vim.opt.colorcolumn = '80'
-vim.opt.signcolumn = 'yes'
+vim.opt.signcolumn = 'no'
 vim.opt.showmode = false
 
 vim.opt.splitright = true
@@ -34,10 +34,10 @@ vim.opt.splitbelow = true
 -- Sets how neovim will display certain whitespace in the editor.
 --  See :help 'list'
 --  and :help 'listchars'
-vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+-- vim.opt.list = true
+-- vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
-vim.opt.wrap = false
+vim.opt.wrap = true
 
 -----------------------------------------------------------
 -- Search
