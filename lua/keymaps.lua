@@ -37,7 +37,6 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- Window Management
 vim.keymap.set('n', '<leader>sv', ':vsplit<CR>', opts) -- Split Vertically
 vim.keymap.set('n', '<leader>sh', ':split<CR>', opts) -- Split Horizontally
-vim.keymap.set('n', '<leader>sm', ':MaximizerToggle<CR>', opts) -- Split Horizontally
 
 -- Saves the changes of vertial editing when exiting with Ctrl + c
 vim.keymap.set('i', '<C-c>', '<Esc>', opts)
