@@ -1,67 +1,21 @@
 ---@diagnostic disable: undefined-field
 vim.loader.enable()
 
-local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
+--    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-    local lazyrepo = 'https://github.com/folke/lazy.nvim.git'
-    vim.fn.system { 'git', 'clone', '--filter=blob:none', '--branch=stable', lazyrepo, lazypath }
-end
+	local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+	vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
-local opts = {
-    spec = {
-        { import = 'plugins' },
-    },
-    ui = {
-        border = 'rounded',
-    },
-    defaults = {
-        lazy = false,
-        version = false,
-    },
-    checker = {
-        enabled = true,
-        notify = false,
-    },
-    change_detection = {
-        notify = false,
-    },
-    performance = {
-        rtp = {
-            disabled_plugins = {
-                '2html_plugin',
-                'tohtml',
-                'getscript',
-                'getscriptPlugin',
-                'gzip',
-                'logipat',
-                'netrw',
-                'netrwPlugin',
-                'netrwSettings',
-                'netrwFileHandlers',
-                'matchit',
-                'tar',
-                'tarPlugin',
-                'rrhelper',
-                'spellfile_plugin',
-                'vimball',
-                'vimballPlugin',
-                'zip',
-                'zipPlugin',
-                'tutor',
-                'rplugin',
-                'syntax',
-                'synmenu',
-                'optwin',
-                'compiler',
-                'bugreport',
-                'ftplugin',
-            },
-        },
-    },
-}
+require("options")
+require("keymaps")
+require("autocommands")
+require("config")
 
-require 'options'
-require 'keymaps'
-require 'autocommands'
-require('lazy').setup(opts)
+-- The line beneath this is called `modeline`. See `:help modeline`
+-- vim: ts=4 sts=4 sw=4 et

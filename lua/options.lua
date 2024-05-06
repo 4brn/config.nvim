@@ -1,86 +1,64 @@
------------------------------------------------------------
--- General Neovim settings and configuration
------------------------------------------------------------
--- See: https://neovim.io/doc/user/vim_diff.html
--- [2] Defaults - *nvim-defaults*
+-- See `:help vim.opt`
+--  For more options, you can see `:help option-list`
 
------------------------------------------------------------
--- General
------------------------------------------------------------
-vim.g.mapleader = ' '
-vim.g.localmapleader = ' '
-vim.opt.clipboard = 'unnamedplus'
--- vim.opt.completeopt = { --[[ "menu", ]]
---     'menuone',
---     'noselect',
--- }
-vim.opt.mouse = 'a'
+--  See `:help 'clipboard'`
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+vim.g.netrw_liststyle = 3
+vim.opt.backspace = "indent,eol,start"
+vim.opt.clipboard = "unnamedplus"
+vim.opt.mouse = "v"
+vim.opt.guicursor = "a:blinkon0"
 
------------------------------------------------------------
--- Neovim UI
------------------------------------------------------------
 vim.opt.number = true
 vim.opt.relativenumber = true
 
-vim.opt.termguicolors = true
-vim.opt.scrolloff = 10
-vim.opt.colorcolumn = '80'
-vim.opt.signcolumn = 'no'
-vim.opt.showmode = false
+-- Show which line your cursor is on
+vim.opt.cursorline = false
+vim.opt.scrolloff = 8
+-- vim.opt.colorcolumn = '80'
+vim.opt.signcolumn = "yes"
 
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
--- Sets how neovim will display certain whitespace in the editor.
---  See :help 'list'
---  and :help 'listchars'
--- vim.opt.list = true
--- vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
-
-vim.opt.wrap = true
-
------------------------------------------------------------
--- Search
------------------------------------------------------------
-vim.opt.incsearch = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.hlsearch = false
+vim.opt.incsearch = true
 
------------------------------------------------------------
--- Cursor
------------------------------------------------------------
-vim.opt.guicursor = ''
-
------------------------------------------------------------
--- Tabs, indent
------------------------------------------------------------
 vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
+vim.opt.softtabstop = 4
 vim.opt.expandtab = true
+vim.opt.autoindent = true
 
+vim.opt.wrap = false
+
+-- Enable break indent
 vim.opt.smartindent = true
 vim.opt.breakindent = true
 
------------------------------------------------------------
--- Undo
------------------------------------------------------------
+vim.opt.termguicolors = true
+vim.opt.background = "dark"
+
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undofile = true
 ---@diagnostic disable-next-line: assign-type-mismatch
-vim.opt.undodir = vim.fn.expand '~/.vim/undodir'
+vim.opt.undodir = vim.fn.expand("~/.vim/undodir")
 
------------------------------------------------------------
--- Memory, CPU
------------------------------------------------------------
 vim.opt.updatetime = 50
--- vim.opt.timeoutlen = 50
+vim.opt.timeoutlen = 250
 
------------------------------------------------------------
--- Startup
------------------------------------------------------------
+-- Don't show the mode, since it's already in the status line
+vim.opt.showmode = false
 
--- Disable nvim intro
-vim.opt.shortmess:append 'sI'
+-- Preview substitutions live, as you type!
+vim.opt.inccommand = "split"
+
+-- Sets how neovim will display certain whitespace characters in the editor.
+--  See `:help 'list'`
+--  and `:help 'listchars'`
+-- vim.opt.list = true
+-- vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
