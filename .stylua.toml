@@ -4,7 +4,7 @@ indent_type = "Tabs" # Spaces
 indent_width = 4
 quote_style = "AutoPreferDouble" # AutoPreferSingle
 call_parentheses = "Always"
-
-# Specify whether to collapse simple statements.
-# Possible options: Never, FunctionOnly, ConditionalOnly, or Always
 collapse_simple_statement = "Never"
+
+[sort_requires]
+enabled = false

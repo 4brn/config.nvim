@@ -1,11 +1,11 @@
 local opts = {
-	-- { "tpope/vim-sleuth" }, -- Detect tabstop and shiftwidth automatically
+	{ "tpope/vim-sleuth" }, -- Detect tabstop and shiftwidth automatically
 
-	-- require("plugins.colorschemes.rose-pine"),
+	require("plugins.colorschemes.rose-pine"),
 	-- require("plugins.colorschemes.tokyonight"),
 	-- require("plugins.colorschemes.night-owl"),
 	-- require("plugins.colorschemes.gruvbox"),
-	require("plugins.colorschemes.catppuccin"),
+	-- require("plugins.colorschemes.catppuccin"),
 
 	require("plugins.lualine"),
 	require("plugins.lspconfig"),
@@ -18,12 +18,14 @@ local opts = {
 	require("plugins.which-key"),
 	require("plugins.autopairs"),
 	require("plugins.conform"),
-	require("plugins.lint"),
+	-- require("plugins.lint"),
 	require("plugins.dressing"),
 	require("plugins.trouble"),
 	require("plugins.gitsigns"),
 	require("plugins.vim-be-good"),
 	require("plugins.indent_line"),
+	require("plugins.zellij"),
+	require("plugins.markdown"),
 
 	-- require 'plugins.todo_comments',
 	-- require 'plugins.mini',

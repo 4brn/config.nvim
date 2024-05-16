@@ -124,7 +124,6 @@ return {
 				-- filetypes = { "astro" },
 			},
 			cssls = {},
-			-- emmet_ls = {},
 			emmet_language_server = {},
 			jsonls = {},
 			tsserver = {
@@ -134,6 +133,8 @@ return {
 					},
 				},
 			},
+			astro = {},
+			tailwindcss = {},
 
 			clangd = {},
 			rust_analyzer = {},
@@ -145,7 +146,7 @@ return {
 			--    https://github.com/pmizio/typescript-tools.nvim
 
 			-- formaters
-			-- prettierd = {},
+			prettierd = {},
 			black = {},
 
 			-- linters
