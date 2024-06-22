@@ -133,13 +133,13 @@ return {
                     },
                 },
             },
-            astro = {},
+            -- astro = {},
             tailwindcss = {},
 
             clangd = {},
             rust_analyzer = {},
             pyright = {},
-            -- gopls = {},
+            gopls = {},
             -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
             --
             -- Some languages (like typescript) have entire language plugins that can be useful:
@@ -147,7 +147,7 @@ return {
 
             -- formaters
             prettierd = {},
-            -- black = {},
+            black = {},
 
             -- linters
             -- eslint_d = {},
