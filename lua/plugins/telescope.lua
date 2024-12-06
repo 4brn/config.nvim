@@ -57,6 +57,11 @@ return {
         --  All the info you're looking for is in `:help telescope.setup()`
         --
         -- defaults = {
+        --   borderchars = {
+        --     prompt = { '─', ' ', ' ', ' ', '─', '─', ' ', ' ' },
+        --     results = { ' ' },
+        --     preview = { ' ' },
+        --   },
         --   mappings = {
         --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
         --   },

@@ -2,7 +2,7 @@
 --    :Lazy update
 require('lazy').setup({
   'tpope/vim-sleuth',
-  require 'plugins.colorschemes.catppuccin',
+  require 'plugins.colorschemes.gruvbox',
   require 'plugins/gitsigns',
   require 'plugins/which-key',
   require 'plugins/telescope',
